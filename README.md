@@ -3,7 +3,9 @@
 
 Introduction
 ------------
-This application will extract daily data from AWS S3 and load the result into a PostgreSQL instance. The [source code](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/shopify_daily_postgres.py) is written in python. It will get the extraction date from an env viariable DATE_CONFIG and execute.
+This application is a data pipeline which extracts daily data from AWS S3 and load the result into a PostgreSQL instance. It can be run with Docker. 
+The [source code](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/shopify_daily_postgres.py) is written in python. 
+It gets the extraction date from the env viariable DATE_CONFIG.
 
 Things need to be configured before:
 
