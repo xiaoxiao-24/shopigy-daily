@@ -18,19 +18,19 @@ config.read('Credential.ini')
 date_arg = os.getenv("DATE_CONFIG")
 
 # data to extract
-BUCKET_NAME = 'alg-data-public'
+BUCKET_NAME = config['AWS S3']['BUCKET_NAME']
 #KEY = '2019-04-01.csv'
 KEY = str(date_arg)+'.csv'
 print("Process data: ", KEY)
 
 s3c = boto3.client(
         's3', 
-        aws_access_key_id = config['AWS S3']['AWSAccessKeyId'],
-        aws_secret_access_key = config['AWS S3']['AWSSecretKey']
+        aws_access_key_id = config['AWS S3']['AWS_ACCESS_KEY_ID'],
+        aws_secret_access_key = config['AWS S3']['AWS_SECRET_KEY']
 )
 
 try:
-    obj = s3c.get_object(Bucket= BUCKET_NAME , Key = KEY)
+    obj = s3c.get_object(Bucket = BUCKET_NAME , Key = KEY)
 except:
     print("Oops!", sys.exc_info()[0], "occurred.")
     print("Access Denied! Problem in source data !")
