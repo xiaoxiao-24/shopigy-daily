@@ -7,19 +7,23 @@ This application will extract daily data from AWS S3 and load the result into a 
 
 Things need to be configured before:
 
-* The date of extraction can be set via the env variable DATE_CONFIG.
+*  Credentials are in a config file: [Credential.ini](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/Credential.example.ini) .
+>> \- Set AWS S3 credentials and bucket 
 
-* Your PostgreSQL credential in config file: Credential.ini .
+>> \- Set PostgreSQL credentials and db,table info 
+
+* The extraction date can be set via the env variable DATE_CONFIG.
 
 
 Build docker image
 ------------------
+Edit [Dockerfile](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/Dockerfile) and build image:
 > $ docker build -t shopify_daily .
 >
 
 Run with docker
 ---------------
-change the extraction date to the one you need and run:
+Change the extraction date to the one you what and run:
 > $ docker run --rm -e DATE_CONFIG="2019-04-02" shopify_daily
 >
 
@@ -31,4 +35,4 @@ Edit [docker_compose.yml](https://github.com/xiaoxiao-24/shopigy-daily/blob/main
 
 Run with airflow
 ----------------
-Deploy this [\*.dag](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/test_dag_shopify.py) file to your airflow dag path and activate it via airflow web 
+Deploy this [test_dag_shopify.py](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/test_dag_shopify.py) dag file to your airflow dag path and activate it via airflow web 
