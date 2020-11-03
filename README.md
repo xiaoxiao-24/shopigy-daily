@@ -35,4 +35,4 @@ Edit [docker_compose.yml](https://github.com/xiaoxiao-24/shopigy-daily/blob/main
 
 Run with airflow
 ----------------
-Deploy this [\*.dag](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/test_dag_shopify.py) file to your airflow dag path and activate it via airflow web 
+Deploy this [test_dag_shopify.py](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/test_dag_shopify.py) dag file to your airflow dag path and activate it via airflow web 
