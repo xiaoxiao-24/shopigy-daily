@@ -11,10 +11,10 @@ default_args = {
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
-    'end_date': datetime(2019, 4, 7),
+    'end_date': datetime(2019, 4, 8),
 }
 
-dag = DAG('xx_test_shopify_2nd', default_args=default_args, schedule_interval=timedelta(days=1))
+dag = DAG('xx_test_shopify', default_args=default_args, schedule_interval='0 2 * * *')
 
 t1 = DockerOperator(
                 task_id='docker_command',
