@@ -1,0 +1,6 @@
+version: '3'
+services:
+    shopify_daily: 
+        image: shopify_daily
+        environment: 
+            - DATE_CONFIG=2019-04-04
