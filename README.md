@@ -36,3 +36,5 @@ Edit [docker_compose.yml](https://github.com/xiaoxiao-24/shopigy-daily/blob/main
 Run with airflow
 ----------------
 Deploy this [test_dag_shopify.py](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/test_dag_shopify.py) dag file to your airflow dag path and activate it via airflow web 
+
+The docker image [shopify_daily pipeline](https://hub.docker.com/repository/docker/xiaoxiaorey/shopify_daily) is available on docker hub.
