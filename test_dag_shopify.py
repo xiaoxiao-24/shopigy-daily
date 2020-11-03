@@ -14,11 +14,11 @@ default_args = {
     'end_date': datetime(2019, 4, 7),
 }
 
-dag = DAG('xx_test_shopify_1st', default_args=default_args, schedule_interval=timedelta(days=1))
+dag = DAG('xx_test_shopify_2nd', default_args=default_args, schedule_interval=timedelta(days=1))
 
 t1 = DockerOperator(
                 task_id='docker_command',
-                image='shopify_daily',
+                image='xiaoxiaorey/shopify_daily:v3',
                 api_version='auto',
                 auto_remove=True,
                 environment={ 
@@ -32,4 +32,3 @@ t1
 
 if __name__ == '__main__':
     dag.cli()
-
