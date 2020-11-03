@@ -7,7 +7,7 @@ This application will extract daily data from AWS S3 and load the result into a 
 
 Things need to be configured before:
 
-*  Credentials in config file: Credential.ini .
+*  Credentials are in a config file: [Credential.ini](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/Credential.example.ini) .
 >> \- Set AWS S3 credentials and bucket 
 
 >> \- Set PostgreSQL credentials and db,table info 
