@@ -6,8 +6,9 @@ Introduction
 This application will extract daily data from AWS S3 and load the result into a PostgreSQL instance. The [source code](https://github.com/xiaoxiao-24/shopigy-daily/blob/main/shopify_daily_postgres.py) is written in python. It will get the extraction date from an env viariable DATE_CONFIG and execute.
 
 Things need to be configured before:
+* Set AWS S3 bucket.
 
-* The date of extraction can be set via the env variable DATE_CONFIG.
+* The extraction date can be set via the env variable DATE_CONFIG.
 
 * Your PostgreSQL credential in config file: Credential.ini .
 
