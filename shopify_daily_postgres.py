@@ -61,5 +61,9 @@ db_pwd = config['PostgreSQL']['DB_PWD']
 db_table = config['PostgreSQL']['DB_TBL']
 
 engine = create_engine('{}://{}:{}@{}:{}/{}'.format(db_type, db_user, db_pwd, db_ip, db_port, db_name))
-df.to_sql(db_table, engine, if_exists='append', index=False)
+
+if (engine.execute("select * from {} where export_date = '{}' ".format(db_table, str(date_arg))).fetchall() == []):
+    df.to_sql(db_table, engine, if_exists='append', index=False)
+else:
+    print("Data of date '{}' already exist.".format(str(date_arg)))
 
