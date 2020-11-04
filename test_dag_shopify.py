@@ -18,7 +18,7 @@ dag = DAG('xx_test_shopify', default_args=default_args, schedule_interval='0 2 *
 
 t1 = DockerOperator(
                 task_id='docker_command',
-                image='xiaoxiaorey/shopify_daily:v3',
+                image='xiaoxiaorey/shopify_daily:v4',
                 api_version='auto',
                 auto_remove=True,
                 environment={ 

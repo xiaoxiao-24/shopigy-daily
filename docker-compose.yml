@@ -1,6 +1,16 @@
 version: '3'
 services:
     shopify_daily: 
-        image: shopify_daily
+        image: xiaoxiaorey/shopify_daily:v4
         environment: 
             - DATE_CONFIG=2019-04-04
+            - DB_TYPE=
+            - DB_IP=
+            - DB_PORT=
+            - DB_NAME=
+            - DB_TBL=
+            - DB_USER=
+            - DB_PWD=
+            - AWS_ACCESS_KEY_ID=
+            - AWS_SECRET_KEY=
+            - BUCKET_NAME=
