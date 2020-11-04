@@ -21,19 +21,16 @@ if os.getenv("AWS_ACCESS_KEY_ID") is None or os.getenv("AWS_ACCESS_KEY_ID") == '
     AWS_Access_Key_ID = config['AWS S3']['AWS_ACCESS_KEY_ID']
 else:
     AWS_Access_Key_ID = os.getenv("AWS_ACCESS_KEY_ID")
-print(AWS_Access_Key_ID)
 
 if os.getenv("AWS_SECRET_KEY") is None or os.getenv("AWS_SECRET_KEY") == '':
     AWS_Secret_Key = config['AWS S3']['AWS_SECRET_KEY']
 else:
     AWS_Secret_Key = os.getenv("AWS_SECRET_KEY")
-print(AWS_Secret_Key)
 
 if os.getenv("BUCKET_NAME") is None or os.getenv("BUCKET_NAME") == '':
     BUCKET_NAME = config['AWS S3']['BUCKET_NAME']
 else:
     BUCKET_NAME = os.getenv("BUCKET_NAME")
-print(BUCKET_NAME)
 
 #KEY = '2019-04-01.csv'
 KEY = date_arg+'.csv'
